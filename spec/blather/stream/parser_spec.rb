@@ -151,8 +151,8 @@ describe Blather::Stream::Parser do
       "<html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'>exit</body></html>",
       "</message>"
     expect(client.data.size).to eq(1)
-    expect(client.data[0].document.xpath('/message/body[.="exit"]')).not_to be_empty
-    expect(client.data[0].document.xpath('/message/im:html/xhtml:body[.="exit"]', 'im' => 'http://jabber.org/protocol/xhtml-im', 'xhtml' => 'http://www.w3.org/1999/xhtml')).not_to be_empty
+    expect(client.data[0].document.xpath('/client:message/client:body[.="exit"]', 'client' => 'jabber:client')).not_to be_empty
+    expect(client.data[0].document.xpath('/client:message/im:html/xhtml:body[.="exit"]', 'client' => 'jabber:client', 'im' => 'http://jabber.org/protocol/xhtml-im', 'xhtml' => 'http://www.w3.org/1999/xhtml')).not_to be_empty
   end
 
   it 'ignores the component namespace on stanzas' do
@@ -161,7 +161,7 @@ describe Blather::Stream::Parser do
       "<html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'>exit</body></html>",
       "</message>"
     expect(client.data.size).to eq(1)
-    expect(client.data[0].document.xpath('/message/body[.="exit"]')).not_to be_empty
-    expect(client.data[0].document.xpath('/message/im:html/xhtml:body[.="exit"]', 'im' => 'http://jabber.org/protocol/xhtml-im', 'xhtml' => 'http://www.w3.org/1999/xhtml')).not_to be_empty
+    expect(client.data[0].document.xpath('/component:message/component:body[.="exit"]', 'component' => 'jabber:component:accept')).not_to be_empty
+    expect(client.data[0].document.xpath('/component:message/im:html/xhtml:body[.="exit"]', 'component' => 'jabber:component:accept', 'im' => 'http://jabber.org/protocol/xhtml-im', 'xhtml' => 'http://www.w3.org/1999/xhtml')).not_to be_empty
   end
 end
