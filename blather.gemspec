@@ -34,6 +34,8 @@ Gem::Specification.new do |s|
   s.rdoc_options = %w{--charset=UTF-8}
   s.extra_rdoc_files = %w{LICENSE README.md}
 
+  s.required_ruby_version = '>= 3.3'
+
   s.add_dependency "eventmachine", ["~> 1.2", ">= 1.2.6"]
   s.add_dependency "nokogiri", ["~> 1.8", ">= 1.8.3"]
   s.add_dependency "niceogiri", ["~> 1.0"]
