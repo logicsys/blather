@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blather::RosterItem do
+RSpec.describe Blather::RosterItem do
   it 'can be initialized with Blather::JID' do
     jid = Blather::JID.new(jid)
     i = Blather::RosterItem.new jid

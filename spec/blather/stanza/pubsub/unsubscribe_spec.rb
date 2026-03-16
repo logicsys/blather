@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'fixtures/pubsub'
 
-describe Blather::Stanza::PubSub::Unsubscribe do
+RSpec.describe Blather::Stanza::PubSub::Unsubscribe do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:unsubscribe, 'http://jabber.org/protocol/pubsub')).to eq(Blather::Stanza::PubSub::Unsubscribe)
   end

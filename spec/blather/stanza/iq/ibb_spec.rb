@@ -42,7 +42,7 @@ def ibb_close_xml
 XML
 end
 
-describe Blather::Stanza::Iq::Ibb::Open do
+RSpec.describe Blather::Stanza::Iq::Ibb::Open do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:open, 'http://jabber.org/protocol/ibb')).to eq(Blather::Stanza::Iq::Ibb::Open)
   end
@@ -69,7 +69,7 @@ describe Blather::Stanza::Iq::Ibb::Open do
   end
 end
 
-describe Blather::Stanza::Iq::Ibb::Data do
+RSpec.describe Blather::Stanza::Iq::Ibb::Data do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:data, 'http://jabber.org/protocol/ibb')).to eq(Blather::Stanza::Iq::Ibb::Data)
   end
@@ -96,7 +96,7 @@ describe Blather::Stanza::Iq::Ibb::Data do
   end
 end
 
-describe Blather::Stanza::Iq::Ibb::Close do
+RSpec.describe Blather::Stanza::Iq::Ibb::Close do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:close, 'http://jabber.org/protocol/ibb')).to eq(Blather::Stanza::Iq::Ibb::Close)
   end

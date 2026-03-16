@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'blather/client/dsl'
 
-describe Blather::DSL do
+RSpec.describe Blather::DSL do
   before do
     @client = Blather::Client.new
     @stream = mock()

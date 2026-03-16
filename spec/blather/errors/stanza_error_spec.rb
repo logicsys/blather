@@ -22,7 +22,7 @@ def stanza_error_node(type = 'cancel', error = 'internal-server-error', msg = ni
   node
 end
 
-describe Blather::StanzaError do
+RSpec.describe Blather::StanzaError do
   it 'can import a node' do
     expect(Blather::StanzaError).to respond_to :import
     e = Blather::StanzaError.import stanza_error_node

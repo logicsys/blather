@@ -17,7 +17,7 @@ def muc_user_xml
   XML
 end
 
-describe 'Blather::Stanza::Presence::MUCUser' do
+RSpec.describe 'Blather::Stanza::Presence::MUCUser' do
   it 'must be importable' do
     muc_user = Blather::XMPPNode.parse(muc_user_xml)
     expect(muc_user).to be_kind_of Blather::Stanza::Presence::MUCUser::InstanceMethods

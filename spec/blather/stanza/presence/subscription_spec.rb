@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blather::Stanza::Presence::Subscription do
+RSpec.describe Blather::Stanza::Presence::Subscription do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:subscription, nil)).to eq(Blather::Stanza::Presence::Subscription)
   end

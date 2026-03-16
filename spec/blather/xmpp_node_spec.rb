@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blather::XMPPNode do
+RSpec.describe Blather::XMPPNode do
   before { @doc = Nokogiri::XML::Document.new }
 
   it 'generates a node based on the registered_name' do

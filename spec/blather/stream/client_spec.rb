@@ -1,7 +1,7 @@
 require 'resolv'
 require 'spec_helper'
 
-describe Blather::Stream::Client do
+RSpec.describe Blather::Stream::Client do
   let(:client)      { mock 'Client' }
   let(:server_port) { 50000 - rand(1000) }
   let(:jid)         { Blather::JID.new 'n@d/r' }

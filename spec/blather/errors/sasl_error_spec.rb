@@ -8,7 +8,7 @@ def sasl_error_node(err_name = 'aborted')
   node
 end
 
-describe Blather::SASLError do
+RSpec.describe Blather::SASLError do
   it 'can import a node' do
     expect(Blather::SASLError).to respond_to :import
     e = Blather::SASLError.import sasl_error_node

@@ -20,7 +20,7 @@ def stream_error_node(error = 'internal-server-error', msg = nil)
   node
 end
 
-describe 'Blather::StreamError' do
+RSpec.describe 'Blather::StreamError' do
   it 'can import a node' do
     err = stream_error_node 'internal-server-error', 'the message'
     expect(Blather::StreamError).to respond_to :import
@@ -33,7 +33,7 @@ describe 'Blather::StreamError' do
   end
 end
 
-describe 'Blather::StreamError when instantiated' do
+RSpec.describe 'Blather::StreamError when instantiated' do
   before do
     @err_name = 'internal-server-error'
     @msg = 'the server has experienced a misconfiguration'
@@ -74,7 +74,7 @@ describe 'Blather::StreamError when instantiated' do
   end
 end
 
-describe 'Each XMPP stream error type' do
+RSpec.describe 'Each XMPP stream error type' do
   %w[ bad-format
       bad-namespace-prefix
       conflict

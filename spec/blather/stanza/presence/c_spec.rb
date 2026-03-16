@@ -11,7 +11,7 @@ def c_xml
   XML
 end
 
-describe 'Blather::Stanza::Presence::C' do
+RSpec.describe 'Blather::Stanza::Presence::C' do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:c, 'http://jabber.org/protocol/caps' )).to eq(Blather::Stanza::Presence::C)
   end

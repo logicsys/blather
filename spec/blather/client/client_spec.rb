@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'blather/client/client'
 
-describe Blather::Client do
+RSpec.describe Blather::Client do
   let(:jid)     { Blather::JID.new 'n@d/r' }
   let(:stream)  { mock 'Stream' }
 

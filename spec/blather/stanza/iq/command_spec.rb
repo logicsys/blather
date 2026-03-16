@@ -17,7 +17,7 @@ def command_xml
   XML
 end
 
-describe Blather::Stanza::Iq::Command do
+RSpec.describe Blather::Stanza::Iq::Command do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:command, 'http://jabber.org/protocol/commands')).to eq(Blather::Stanza::Iq::Command)
   end

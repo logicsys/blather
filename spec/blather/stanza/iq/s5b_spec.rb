@@ -21,7 +21,7 @@ def s5b_open_xml
 XML
 end
 
-describe Blather::Stanza::Iq::S5b do
+RSpec.describe Blather::Stanza::Iq::S5b do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:query, 'http://jabber.org/protocol/bytestreams')).to eq(Blather::Stanza::Iq::S5b)
   end

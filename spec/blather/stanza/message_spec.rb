@@ -68,7 +68,7 @@ def delayed_message_xml
   XML
 end
 
-describe Blather::Stanza::Message do
+RSpec.describe Blather::Stanza::Message do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:message, nil)).to eq(Blather::Stanza::Message)
   end

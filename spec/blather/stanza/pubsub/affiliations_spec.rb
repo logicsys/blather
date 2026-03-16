@@ -9,7 +9,7 @@ def control_affiliations
     :none => ['node6'] }
 end
 
-describe Blather::Stanza::PubSub::Affiliations do
+RSpec.describe Blather::Stanza::PubSub::Affiliations do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:affiliations, Blather::Stanza::PubSub.registered_ns)).to eq(Blather::Stanza::PubSub::Affiliations)
   end

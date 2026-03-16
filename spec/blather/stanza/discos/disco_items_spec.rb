@@ -21,7 +21,7 @@ def disco_items_xml
   XML
 end
 
-describe Blather::Stanza::Iq::DiscoItems do
+RSpec.describe Blather::Stanza::Iq::DiscoItems do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:query, 'http://jabber.org/protocol/disco#items')).to eq(Blather::Stanza::Iq::DiscoItems)
   end
@@ -115,7 +115,7 @@ describe Blather::Stanza::Iq::DiscoItems do
   end
 end
 
-describe Blather::Stanza::Iq::DiscoItems::Item do
+RSpec.describe Blather::Stanza::Iq::DiscoItems::Item do
   it 'will auto-inherit nodes' do
     n = parse_stanza "<item jid='foo@bar/baz' node='music' name='Music from the time of Shakespeare' />"
     i = Blather::Stanza::Iq::DiscoItems::Item.new n.root

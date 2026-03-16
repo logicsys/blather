@@ -25,7 +25,7 @@ def si_xml
 XML
 end
 
-describe Blather::Stanza::Iq::Si do
+RSpec.describe Blather::Stanza::Iq::Si do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:si, 'http://jabber.org/protocol/si')).to eq(Blather::Stanza::Iq::Si)
   end
@@ -63,7 +63,7 @@ describe Blather::Stanza::Iq::Si do
   end
 end
 
-describe Blather::Stanza::Iq::Si::Si do
+RSpec.describe Blather::Stanza::Iq::Si::Si do
   it 'can set and get attributes' do
     si = Blather::Stanza::Iq::Si::Si.new
     si.id = 'a1'
@@ -75,7 +75,7 @@ describe Blather::Stanza::Iq::Si::Si do
   end
 end
 
-describe Blather::Stanza::Iq::Si::Si::File do
+RSpec.describe Blather::Stanza::Iq::Si::Si::File do
   it 'can be initialized with name and size' do
     file = Blather::Stanza::Iq::Si::Si::File.new('test.txt', 123)
     expect(file.name).to eq('test.txt')

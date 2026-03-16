@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blather::Roster do
+RSpec.describe Blather::Roster do
   before do
     @stream = mock()
     @stream.stubs(:write)

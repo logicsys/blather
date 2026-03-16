@@ -35,7 +35,7 @@ def muc_decline_xml
   XML
 end
 
-describe 'Blather::Stanza::Message::MUCUser' do
+RSpec.describe 'Blather::Stanza::Message::MUCUser' do
   it 'ensures a form node is present on create' do
     c = Blather::Stanza::Message::MUCUser.new
     expect(c.xpath('ns:x', :ns => Blather::Stanza::Message::MUCUser.registered_ns)).not_to be_empty

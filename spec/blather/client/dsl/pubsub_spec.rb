@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'fixtures/pubsub'
 require 'blather/client/dsl'
 
-describe Blather::DSL::PubSub do
+RSpec.describe Blather::DSL::PubSub do
   before do
     @host = 'host.name'
     @client = mock()
@@ -299,7 +299,7 @@ describe Blather::DSL::PubSub do
   end
 end
 
-describe 'Blather::DSL::PubSub callbacks' do
+RSpec.describe 'Blather::DSL::PubSub callbacks' do
   before do
     @host = 'host.name'
     @client = Blather::Client.setup Blather::JID.new('n@d/r'), 'pass'

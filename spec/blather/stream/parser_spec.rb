@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blather::Stream::Parser do
+RSpec.describe Blather::Stream::Parser do
   let :client do
     Class.new do
       attr_reader :data

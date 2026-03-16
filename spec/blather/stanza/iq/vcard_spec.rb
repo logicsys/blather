@@ -10,7 +10,7 @@ def vcard_xml
 XML
 end
 
-describe Blather::Stanza::Iq::Vcard do
+RSpec.describe Blather::Stanza::Iq::Vcard do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:vCard, 'vcard-temp')).to eq(Blather::Stanza::Iq::Vcard)
   end
@@ -48,7 +48,7 @@ describe Blather::Stanza::Iq::Vcard do
   end
 end
 
-describe Blather::Stanza::Iq::Vcard::Vcard do
+RSpec.describe Blather::Stanza::Iq::Vcard::Vcard do
   it 'can set vcard elements' do
     query = Blather::Stanza::Iq::Vcard.new :set
     query.vcard['NICKNAME'] = 'Romeo'

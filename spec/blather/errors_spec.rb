@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe Blather::BlatherError do
+RSpec.describe Blather::BlatherError do
   it 'is handled by :error' do
     expect(Blather::BlatherError.new.handler_hierarchy).to eq([:error])
   end
 end
 
-describe 'Blather::ParseError' do
+RSpec.describe 'Blather::ParseError' do
   before { @error = Blather::ParseError.new('</generate-parse-error>"') }
 
   it 'is registers with the handler hierarchy' do
@@ -19,7 +19,7 @@ describe 'Blather::ParseError' do
   end
 end
 
-describe 'Blather::UnknownResponse' do
+RSpec.describe 'Blather::UnknownResponse' do
   before { @error = Blather::UnknownResponse.new(Blather::XMPPNode.new('foo-bar')) }
 
   it 'is registers with the handler hierarchy' do

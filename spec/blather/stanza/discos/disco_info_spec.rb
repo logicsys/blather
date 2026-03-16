@@ -19,7 +19,7 @@ def disco_info_xml
   XML
 end
 
-describe Blather::Stanza::Iq::DiscoInfo do
+RSpec.describe Blather::Stanza::Iq::DiscoInfo do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:query, 'http://jabber.org/protocol/disco#info')).to eq(Blather::Stanza::Iq::DiscoInfo)
   end
@@ -79,7 +79,7 @@ describe Blather::Stanza::Iq::DiscoInfo do
 
 end
 
-describe 'Blather::Stanza::Iq::DiscoInfo identities' do
+RSpec.describe 'Blather::Stanza::Iq::DiscoInfo identities' do
   it 'takes a list of hashes for identities' do
     ids = [
       {:name => 'name', :type => 'type', :category => 'category'},
@@ -134,7 +134,7 @@ describe 'Blather::Stanza::Iq::DiscoInfo identities' do
   end
 end
 
-describe 'Blather::Stanza::Iq::DiscoInfo features' do
+RSpec.describe 'Blather::Stanza::Iq::DiscoInfo features' do
   it 'takes a list of features as strings' do
     features = %w[feature1 feature2 feature3]
     control = features.map { |f| Blather::Stanza::Iq::DiscoInfo::Feature.new f }
@@ -180,7 +180,7 @@ describe 'Blather::Stanza::Iq::DiscoInfo features' do
   end
 end
 
-describe Blather::Stanza::Iq::DiscoInfo::Identity do
+RSpec.describe Blather::Stanza::Iq::DiscoInfo::Identity do
   it 'will auto-inherit nodes' do
     n = parse_stanza "<identity name='Personal Events' type='pep' category='pubsub' node='publish' xml:lang='en' />"
     i = Blather::Stanza::Iq::DiscoInfo::Identity.new n.root
@@ -225,7 +225,7 @@ describe Blather::Stanza::Iq::DiscoInfo::Identity do
   end
 end
 
-describe Blather::Stanza::Iq::DiscoInfo::Feature do
+RSpec.describe Blather::Stanza::Iq::DiscoInfo::Feature do
   it 'will auto-inherit nodes' do
     n = parse_stanza "<feature var='ipv6' />"
     i = Blather::Stanza::Iq::DiscoInfo::Feature.new n.root

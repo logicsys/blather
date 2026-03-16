@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blather::Stanza::Iq do
+RSpec.describe Blather::Stanza::Iq do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:iq, nil)).to eq(Blather::Stanza::Iq)
   end

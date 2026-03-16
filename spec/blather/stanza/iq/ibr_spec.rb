@@ -16,7 +16,7 @@ def ibr_xml
 XML
 end
 
-describe Blather::Stanza::Iq::IBR do
+RSpec.describe Blather::Stanza::Iq::IBR do
   let(:ibr) { Blather::Stanza::Iq::IBR.new }
   let(:test_string) { "<a&a>" }
 

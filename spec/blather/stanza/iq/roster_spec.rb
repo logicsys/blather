@@ -24,7 +24,7 @@ def roster_xml
 XML
 end
 
-describe Blather::Stanza::Iq::Roster do
+RSpec.describe Blather::Stanza::Iq::Roster do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:query, 'jabber:iq:roster')).to eq(Blather::Stanza::Iq::Roster)
   end
@@ -46,7 +46,7 @@ describe Blather::Stanza::Iq::Roster do
   end
 end
 
-describe Blather::Stanza::Iq::Roster::RosterItem do
+RSpec.describe Blather::Stanza::Iq::Roster::RosterItem do
   it 'can be initialized with just a Blather::JID' do
     i = Blather::Stanza::Iq::Roster::RosterItem.new 'n@d/r'
     expect(i.jid).to eq(Blather::JID.new('n@d/r').stripped)

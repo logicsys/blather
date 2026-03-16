@@ -8,7 +8,7 @@ def control_subscriptions
     :none => [{:node => 'node5', :jid => 'francisco@denmark.lit'}] }
 end
 
-describe Blather::Stanza::PubSub::Subscriptions do
+RSpec.describe Blather::Stanza::PubSub::Subscriptions do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:subscriptions, 'http://jabber.org/protocol/pubsub')).to eq(Blather::Stanza::PubSub::Subscriptions)
   end

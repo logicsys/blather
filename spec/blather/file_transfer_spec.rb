@@ -37,7 +37,7 @@ def si_xml
 XML
 end
 
-describe Blather::FileTransfer do
+RSpec.describe Blather::FileTransfer do
   before do
     @host = 'host.name'
     @client = Blather::Client.setup Blather::JID.new('n@d/r'), 'pass'

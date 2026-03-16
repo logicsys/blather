@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'fixtures/pubsub'
 
-describe Blather::Stanza::PubSub::Retract do
+RSpec.describe Blather::Stanza::PubSub::Retract do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:retract, 'http://jabber.org/protocol/pubsub')).to eq(Blather::Stanza::PubSub::Retract)
   end

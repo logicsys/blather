@@ -8,7 +8,7 @@ def ping_xml
 XML
 end
 
-describe Blather::Stanza::Iq::Ping do
+RSpec.describe Blather::Stanza::Iq::Ping do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:ping, 'urn:xmpp:ping')).to eq(Blather::Stanza::Iq::Ping)
   end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blather::Stanza do
+RSpec.describe Blather::Stanza do
   it 'provides .next_id helper for generating new IDs' do
     expect { Blather::Stanza.next_id }.to change Blather::Stanza, :next_id
   end

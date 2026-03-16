@@ -10,7 +10,7 @@ def muc_xml
   XML
 end
 
-describe 'Blather::Stanza::Presence::MUC' do
+RSpec.describe 'Blather::Stanza::Presence::MUC' do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:x, 'http://jabber.org/protocol/muc' )).to eq(Blather::Stanza::Presence::MUC)
   end

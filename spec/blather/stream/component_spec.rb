@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blather::Stream::Component do
+RSpec.describe Blather::Stream::Component do
   let(:client)      { mock 'Client' }
   let(:server_port) { 50000 - rand(1000) }
   let(:jid)         { 'comp.id' }

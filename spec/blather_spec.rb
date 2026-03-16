@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blather do
+RSpec.describe Blather do
 
   describe "while accessing to Logger object" do
     it "should return a Logger instance" do

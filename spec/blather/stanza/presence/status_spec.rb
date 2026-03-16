@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blather::Stanza::Presence::Status do
+RSpec.describe Blather::Stanza::Presence::Status do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:status, nil)).to eq(Blather::Stanza::Presence::Status)
   end

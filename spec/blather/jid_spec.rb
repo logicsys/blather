@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blather::JID do
+RSpec.describe Blather::JID do
   it 'does nothing if creaded from Blather::JID' do
     jid = Blather::JID.new 'n@d/r'
     expect(Blather::JID.new(jid).object_id).to eq(jid.object_id)

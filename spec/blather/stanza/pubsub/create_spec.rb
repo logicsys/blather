@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'fixtures/pubsub'
 
-describe Blather::Stanza::PubSub::Create do
+RSpec.describe Blather::Stanza::PubSub::Create do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:create, 'http://jabber.org/protocol/pubsub')).to eq(Blather::Stanza::PubSub::Create)
   end

@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'fixtures/pubsub'
 
-describe Blather::Stanza::PubSub do
+RSpec.describe Blather::Stanza::PubSub do
   it 'registers itself' do
     expect(Blather::XMPPNode.class_from_registration(:pubsub, 'http://jabber.org/protocol/pubsub')).to eq(Blather::Stanza::PubSub)
   end
@@ -31,7 +31,7 @@ describe Blather::Stanza::PubSub do
   end
 end
 
-describe Blather::Stanza::PubSub::PubSubItem do
+RSpec.describe Blather::Stanza::PubSub::PubSubItem do
   it 'can be initialized with just an ID' do
     id = 'foobarbaz'
     item = Blather::Stanza::PubSub::Items::PubSubItem.new id

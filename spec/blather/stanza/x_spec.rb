@@ -28,7 +28,7 @@ def x_xml
   XML
 end
 
-describe Blather::Stanza::X do
+RSpec.describe Blather::Stanza::X do
 
   it 'can be created from an XML string' do
     x = Blather::Stanza::X.new parse_stanza(x_xml).root
@@ -150,7 +150,7 @@ describe Blather::Stanza::X do
 
 end
 
-describe Blather::Stanza::X::Field do
+RSpec.describe Blather::Stanza::X::Field do
   subject { Blather::Stanza::X::Field.new nil }
 
   it "should have the namespace 'jabber:x:data'" do
@@ -234,7 +234,7 @@ describe Blather::Stanza::X::Field do
   end
 end
 
-describe Blather::Stanza::X::Field::Option do
+RSpec.describe Blather::Stanza::X::Field::Option do
 
   it 'has a value attribute' do
     n = Blather::Stanza::X::Field::Option.new 'person1', 'Person 1'
