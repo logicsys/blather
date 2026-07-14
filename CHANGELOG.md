@@ -1,8 +1,11 @@
-# [develop](https://github.com/adhearsion/blather/compare/master...develop)
+# [develop](https://github.com/logicsys/blather)
+
+# [v2.1.1](https://github.com/logicsys/blather/compare/v2.0.0...v2.1.1) - 2026-07-14
+  * First stable release of the logicsys fork (supersedes 2.1.0.rc1)
   * No default [chat state](https://xmpp.org/extensions/xep-0085.html) on new messages, if you want one you need to set it. Blather version 2.0 and prior set this value to `active`
   * jabber:client and jabber:component:accept namespaces are no longer erased when parsing, so if you manually select nodes assuming there will be no namespace for these, you need to update
-  * Breaking change (for release in v3.0.0): Falsy handler return value no longer causes passing to the next handler. Use `pass` explicitly for that.
-  * Breaking change (for release in v3.0.0): Blather::Client uses EM.defer instead of sucker_punch for threadpool, or else no threads when passed async: true
+  * Breaking change: Falsy handler return value no longer causes passing to the next handler. Use `pass` explicitly for that.
+  * Breaking change: Blather::Client uses EM.defer instead of sucker_punch for threadpool, or else no threads when passed async: true
   * Bugfix: Blather::Stanza::X#find_or_create only looks at immediate children of parent now
   * Feature: Blather::Stanza::X::Field values can be arrays to support multiple-valued fields
   * Feature: Add Blather::Stanza::Iq::IBR to implement XEP-0077 In-Band Registration
